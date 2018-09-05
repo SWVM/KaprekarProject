@@ -36,8 +36,6 @@ int isKaprekar(int n) {
 
   //for each possible "split" of the square...
   for(i=1; i<=numDigits; i++) {
-    //increase the modulus by a factor of 10
-
 
     //split the square into two parts
     first = square / modulus;
@@ -48,6 +46,8 @@ int isKaprekar(int n) {
        first + second == n) {
       return 1;
     }
+    //increase the modulus by a factor of 10
+
     modulus *= 10;
   }
   return 0;
